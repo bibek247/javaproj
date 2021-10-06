@@ -59,6 +59,14 @@ public class Usercontroller {
 	}
 
 
+	@GetMapping(path="/users-test")
+	public List<User> getalluser3() {
+		// TODO Auto-generated method stub
+		List<User> lu2 = userdaoservice.findall();
+		return lu2;
+	}
+	
+	
 	@DeleteMapping(path="/user/{id}")
 	private User deleteuser(@PathVariable int id) {
 		// TODO Auto-generated method stub
